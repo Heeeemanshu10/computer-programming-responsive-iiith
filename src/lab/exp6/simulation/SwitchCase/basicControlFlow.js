@@ -123,7 +123,7 @@ window.view = {
   				this.showDay('case7Id', this.currentSiblingElement.id, 'sundayImages', 'strNullId', 'Sunday');
   				break;
   			default:
-  				this.showDay('defaultId', this.currentSiblingElement.id, null, 'strNullId', 'null');
+  				this.showDay('defaultId', this.currentSiblingElement.id, null, 'strNullId', 'Invalid');
         		break;	
 		}
 	},
@@ -246,7 +246,12 @@ window.view = {
 				this.changeOpacity('holidayImage');
 				this.setInnerHtml('outputDayId', 'HOLIDAY');
 	 		}
-	 	}
+		 }
+		 if(model.inputNumber === 0)
+		 {
+			 if(this.nextSiblingElement.id === 'invalidIPId')
+			 this.setInnerHtml('outputDayId','INVALID INPUT');
+		 }
 		if (this.nextSiblingElement.id === 'ifId')
 			this.codeExecutionWithColour();
 		if (this.nextSiblingElement.id === 'closeBrc2Id' || this.nextSiblingElement.id === 'elseId' || this.nextSiblingElement.id === 'elseIfId') {
