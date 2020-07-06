@@ -11,6 +11,7 @@ window.model = {
 		this.c = document.getElementById('c').value
 		this.d = document.getElementById('d').value
 	},
+
 	findexp: function (expression) {
 		var isexpfinished = 1, offset = 0;
 		var j, i;
@@ -906,3 +907,11 @@ window.view = {
 } 
 
 window.onload = function () { view.init() }
+function edit() {
+	 document.getElementById('a').value=0;
+	 document.getElementById('b').value=0;
+	 document.getElementById('c').value=0;
+	 document.getElementById('d').value=0;
+	
+
+}
